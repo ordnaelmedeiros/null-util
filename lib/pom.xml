@@ -3,10 +3,41 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.ordnaelmedeiros</groupId>
 	<artifactId>null-util</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>Null Util</name>
 	<description>Null Util</description>
 
+	<developers>
+		<developer>
+			<id>ordnaelmedeiros</id>
+			<name>Leandro Rempel Medeiros</name>
+			<email>ordnaelmedeiros@gmail.com</email>
+			<timezone>-3</timezone>
+		</developer>
+	</developers>
+	
+	<scm>
+		<connection>scm:git:https://github.com/ordnaelmedeiros/null-util.git</connection>
+		<developerConnection>scm:git:https://github.com/ordnaelmedeiros/null-util.git</developerConnection>
+		<url>https://github.com/ordnaelmedeiros/null-util</url>
+		<tag>null-util-0.0.1</tag>
+	</scm>
+
+	<!-- exemplo, use conforme a sua licenca -->
+	<licenses>
+		<license>
+			<name>Mozilla Public License, Version 2.0</name>
+			<url>http://www.mozilla.org/MPL/2.0/index.txt</url>
+		</license>
+	</licenses>
+	
+	<!-- conf obrigatoria para o Sonatype OSS -->
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+	
 	<properties>
 	
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -24,47 +55,6 @@
 		
 	</properties>
 	
-	<!-- conf obrigatoria para o Sonatype OSS -->
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-	
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<developers>
-		<developer>
-			<id>ordnaelmedeiros</id>
-			<name>Leandro Rempel Medeiros</name>
-			<email>ordnaelmedeiros@gmail.com</email>
-			<timezone>-3</timezone>
-		</developer>
-	</developers>
-	
-	<scm>
-		<connection>scm:git:https://github.com/ordnaelmedeiros/null-util.git</connection>
-		<developerConnection>scm:git:https://github.com/ordnaelmedeiros/null-util.git</developerConnection>
-		<url>https://github.com/ordnaelmedeiros/null-util.git</url>
-	  <tag>null-util-0.0.1</tag>
-  </scm>
-
-	<!-- exemplo, use conforme a sua licenca -->
-	<licenses>
-		<license>
-			<name>Mozilla Public License, Version 2.0</name>
-			<url>http://www.mozilla.org/MPL/2.0/index.txt</url>
-		</license>
-	</licenses>
-	
 	<distributionManagement>
 		<snapshotRepository>
 			<id>sonatype-nexus-snapshots</id>
@@ -77,7 +67,7 @@
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
-
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -91,4 +81,14 @@
 		</plugins>
 	</build>
 	
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 </project>
