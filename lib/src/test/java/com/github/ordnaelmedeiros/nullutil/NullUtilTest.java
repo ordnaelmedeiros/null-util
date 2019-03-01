@@ -10,26 +10,43 @@ public class NullUtilTest {
 
 	@Test
 	public void objNotNull() {
-		Object obj = new Object();
-		assertTrue(isNotNull(() -> obj));
+		People people = new People();
+		assertTrue(isNotNull(() -> people));
 	}
+	
+	@Test
+	public void objNotNullPath1() {
+		People people = new People();
+		people.setAdress(new Address());
+		assertTrue(isNotNull(() -> people.getAdress()));
+	}
+	
+	@Test
+	public void objNotNullPath2() {
+		People people = new People();
+		people.setAdress(new Address());
+		people.getAdress().setName("Test");
+		assertTrue(isNotNull(() -> people.getAdress().getName()));
+	}
+	
 	
 	@Test
 	public void objNull() {
-		Object obj = null; 
-		assertFalse(isNotNull(() -> obj));
+		People people = null; 
+		assertFalse(isNotNull(() -> people));
 	}
 	
 	@Test
-	public void objPathNotNull() {
-		Object obj = new Object();
-		assertTrue(isNotNull(() -> obj.getClass()));
+	public void objNullPath1() {
+		People people = new People();
+		assertFalse(isNotNull(() -> people.getAdress().getName()));
 	}
 	
 	@Test
-	public void objPathNull() {
-		Object obj = null; 
-		assertFalse(isNotNull(() -> obj.getClass()));
+	public void objNullPath2() {
+		People people = new People();
+		people.setAdress(new Address());
+		assertFalse(isNotNull(() -> people.getAdress().getName()));
 	}
 	
 }
