@@ -6,7 +6,7 @@ https://mvnrepository.com/artifact/com.github.ordnaelmedeiros/null-util
 <dependency>
 	<groupId>com.github.ordnaelmedeiros</groupId>
 	<artifactId>null-util</artifactId>
-	<version>0.0.2</version>
+	<version>1.0.0</version>
 </dependency>
 ```
 
