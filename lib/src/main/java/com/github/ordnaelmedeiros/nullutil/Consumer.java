@@ -1,8 +1,8 @@
 package com.github.ordnaelmedeiros.nullutil;
 
 @FunctionalInterface
-public interface Consumer {
+public interface Consumer<T> {
 
-	Object accept() throws NullPointerException;
+	T accept() throws NullPointerException;
 	
 }
