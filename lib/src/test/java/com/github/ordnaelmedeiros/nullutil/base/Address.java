@@ -1,4 +1,4 @@
-package com.github.ordnaelmedeiros.nullutil;
+package com.github.ordnaelmedeiros.nullutil.base;
 
 public class Address {
 

@@ -2,13 +2,14 @@ package com.github.ordnaelmedeiros.nullutil.validation;
 
 import com.github.ordnaelmedeiros.nullutil.Consumer;
 
-public class NullOneList {
+public class NotNullOne {
 
+	@SuppressWarnings("unchecked")
 	public boolean execute(Consumer<Object> ...consumers) {
 		
-		NullIsNull<Object> isNull = new NullIsNull<>();
+		NullIs<Object> isNull = new NullIs<>();
 		for (Consumer<Object> consumer : consumers) {
-			if (isNull.execute(consumer)) {
+			if (!isNull.execute(consumer)) {
 				return true;
 			}
 		}

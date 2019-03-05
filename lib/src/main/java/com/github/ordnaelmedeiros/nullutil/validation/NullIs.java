@@ -2,7 +2,7 @@ package com.github.ordnaelmedeiros.nullutil.validation;
 
 import com.github.ordnaelmedeiros.nullutil.Consumer;
 
-public class NullIsNull<T> {
+public class NullIs<T> {
 
 	public boolean execute(Consumer<T> action) {
 		try {

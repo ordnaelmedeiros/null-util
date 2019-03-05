@@ -6,7 +6,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class NullTestIs {
+import com.github.ordnaelmedeiros.nullutil.base.Address;
+import com.github.ordnaelmedeiros.nullutil.base.People;
+
+public class NullIsTest {
 
 	@Test
 	public void objNotNull() {
